@@ -6,12 +6,14 @@ import { IonicModule } from '@ionic/angular';
 
 
 import { OfferBookingsPage } from './offer-bookings.page';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    IonicModule
+    IonicModule,
+    RouterModule
   ],
   declarations: [OfferBookingsPage]
 })

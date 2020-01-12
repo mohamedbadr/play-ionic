@@ -1,9 +1,14 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { PlacesPage } from './places/places.page';
+import { DiscoverPageModule } from './places/discover/discover.module';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
+  { path: '', redirectTo: 'places', pathMatch: 'full' },
+  {
+    path: 'places',
+    loadChildren: () => import('./places/places.module').then(m => m.PlacesPageModule)
+  }
 ];
 
 @NgModule({

@@ -16,11 +16,15 @@ const routes: Routes = [
     loadChildren: () => import('./places/places.module').then(m => m.PlacesPageModule),
     canLoad: [AuthGuard]
   },
-  // {
-  //   path: 'bookings',
-  //   loadChildren: () => import('./places/places.module').then(m => m.PlacesPageModule),
-  //   canLoad: [AuthGuard]
-  // }
+  {
+    path: 'bookings',
+    loadChildren: () => import('./bookings/bookings.module').then(m => m.BookingsPageModule)
+  },
+  {
+    path: 'bookings',
+    loadChildren: () => import('./places/places.module').then(m => m.PlacesPageModule),
+    canLoad: [AuthGuard]
+  }
 ];
 
 @NgModule({

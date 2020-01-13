@@ -6,6 +6,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { PlaceDetailPage } from './place-detail.page';
 import { PlaceDetailPageRoutingModule } from './place-detail-routing.module';
+import { CreateBookingComponent } from '../../../bookings/create-booking/create-booking.component';
 
 @NgModule({
   imports: [
@@ -14,6 +15,7 @@ import { PlaceDetailPageRoutingModule } from './place-detail-routing.module';
     IonicModule,
     PlaceDetailPageRoutingModule
   ],
-  declarations: [PlaceDetailPage]
+  declarations: [PlaceDetailPage, CreateBookingComponent],
+  entryComponents: [CreateBookingComponent]
 })
 export class PlaceDetailPageModule { }
